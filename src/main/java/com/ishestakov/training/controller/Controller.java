@@ -1,6 +1,6 @@
-package com.popovich.training.controller;
+package com.ishestakov.training.controller;
 
-import com.popovich.training.service.Service;
+import com.ishestakov.training.service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,10 +19,16 @@ public class Controller {
     }
 
     // localhost/api/add?name=MyNote&text=FirstText
-    @PostMapping("/add")
+    @PostMapping("/addnote")
     public String createNote(@RequestParam String name, @RequestParam String text) {
         service.createNote(name, text);
         return "Note created successfully";
+    }
+
+    @PostMapping("/addnotecomment")
+    public String createNoteComment(@RequestParam Long note_id, @RequestParam String comment) {
+        service.createNoteComment(note_id, comment);
+        return "Note comment created successfully";
     }
 
 }

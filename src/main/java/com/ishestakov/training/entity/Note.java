@@ -1,4 +1,4 @@
-package com.popovich.training.entity;
+package com.ishestakov.training.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

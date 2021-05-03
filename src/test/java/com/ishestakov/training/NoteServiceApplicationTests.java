@@ -1,4 +1,4 @@
-package com.popovich.training;
+package com.ishestakov.training;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
